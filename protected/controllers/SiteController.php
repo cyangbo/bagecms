@@ -19,5 +19,12 @@ class SiteController extends XFrontBase
     {
       $this->render('index',array('model'=>$model));
     }
+    
+    /*
+     * 物流跟踪
+     */
+    public function actionTracking(){
+        $this->reader('tracking');
+    }
 
 }
