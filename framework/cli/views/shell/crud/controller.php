@@ -55,6 +55,10 @@ class <?php echo $controllerClass; ?> extends Controller
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+            'actions'=>array('index','view','captcha'),
+            'users'=>array('*'),
+           ),
 		);
 	}
 

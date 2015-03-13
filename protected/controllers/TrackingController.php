@@ -9,12 +9,16 @@ class TrackingController extends XFrontBase
     public function actionIndex ()
     {
       
-      if($_POST['transNo']){
+      
           
       
       
       //对输入的内容进行过滤
       $transNo = trim($_POST['transNo']);
+      
+      if($transNo == ''){
+          $transNo = '空';
+      }
        
       //构造出网址:$track_url
       //http://114.215.84.38:8001/Service1.asmx/GetBillRoute?transNo=$_POST['transNo']
@@ -44,7 +48,10 @@ class TrackingController extends XFrontBase
       
 
       $this->render('index',array(result => $result,count => $count,transNo =>$transNo));
-      }
+      
+      
+      
+      
     }
 
 }

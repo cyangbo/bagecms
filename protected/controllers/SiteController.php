@@ -20,11 +20,23 @@ class SiteController extends XFrontBase
       $this->render('index',array('model'=>$model));
     }
     
+
     /*
-     * 物流跟踪
+     * 验证码
      */
-    public function actionTracking(){
-        $this->reader('tracking');
+    
+    public function actions()
+    {
+        return array(
+            // captcha action renders the CAPTCHA image displayed on the contact page
+            'captcha'=>array(
+                'class'=>'CCaptchaAction',
+                'backColor'=>0xFFFFFF,
+                'maxLength'=>'4',       // 最多生成几个字符
+                'minLength'=>'4',       // 最少生成几个字符
+                'height'=>'40'
+            ),
+        );
     }
 
 }

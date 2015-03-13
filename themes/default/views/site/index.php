@@ -32,28 +32,32 @@ jQuery(".banner").hover(function(){jQuery(this).find(".prev,.next").stop(true,tr
   
 
   
-    <div class="moduleBox about">
+    <div class="moduleBox cultural">
       <div class="col">
         <div>
           <h2>快递跟踪<em>Tracking</em></h2>
           </div>
       </div>  
       <div class="con">
-        <form target="_blank" action='<?php echo $this->createUrl('tracking/index');?>' method="post">                      
+       <form target="_blank" action='<?php echo $this->createUrl('tracking/index');?>' method="post">                      
            <div>
            <textarea  class="frmInput" type="text" name="transNo" style="width:250px;height:150px;"></textarea>
            <p>提示:只支持单个快件查询</p>
            </div>
+
            <div>
-           <input type="submit" value="查询" class="button">
-           
+           <input type="submit" value="查询" class="button"> 
            </div>          
             </form>
+            
+            
       </div>
-      
-      
     </div>
     
+    
+    
+  
+  
     
     <div class="moduleBox cultural">
       <div class="col">
